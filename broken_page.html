@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chennai Vegetable Market - UI v2.0</title>
+    <style>
+        body {
+            background-color: #1a1c23; /* Dark background matching the screenshot */
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        /* THE TRAP: We use a flexbox container instead of the old Table ID */
+        #modern-veg-grid-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid #2d303a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* THE TRAP: We use CSS Grid instead of <tr> rows */
+        .veg-card {
+            display: grid;
+            grid-template-columns: 3fr 1fr 1.5fr 1fr;
+            padding: 16px 24px;
+            background-color: #21242c;
+            border-bottom: 1px solid #2d303a;
+            align-items: center;
+        }
+
+        .veg-card:last-child {
+            border-bottom: none;
+        }
+
+        .header-row {
+            font-weight: 600;
+            background-color: #1a1c23;
+            color: #a0a4b8;
+            font-size: 0.9em;
+        }
+
+        /* THE TRAP: Completely custom class names instead of <td> */
+        .item-title { font-size: 1.1em; }
+        .wholesale-val { color: #e5e7eb; }
+        .retail-val { color: #e5e7eb; }
+        .qty { color: #a0a4b8; }
+    </style>
+</head>
+<body>
+
+    <div id="modern-veg-grid-container">
+        <!-- Headers -->
+        <div class="veg-card header-row">
+            <div class="header-title">Vegetable</div>
+            <div class="header-price">Price</div>
+            <div class="header-retail">Retail Price</div>
+            <div class="header-qty">Units</div>
+        </div>
+
+        <!-- Item 1 -->
+        <div class="veg-card">
+            <div class="item-title">Onion Big (பெரிய வெங்காயம்)</div>
+            <div class="wholesale-val">₹35</div>
+            <div class="retail-val">₹39 - 46</div>
+            <div class="qty">1kg</div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="veg-card">
+            <div class="item-title">Onion Small (சின்ன வெங்காயம்)</div>
+            <div class="wholesale-val">₹54</div>
+            <div class="retail-val">₹59 - 70</div>
+            <div class="qty">1kg</div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="veg-card">
+            <div class="item-title">Tomato (தக்காளி)</div>
+            <div class="wholesale-val">₹24</div>
+            <div class="retail-val">₹26 - 31</div>
+            <div class="qty">1kg</div>
+        </div>
+        
+        <!-- Item 4 -->
+        <div class="veg-card">
+            <div class="item-title">Green Chilli (பச்சை மிளகாய்)</div>
+            <div class="wholesale-val">₹55</div>
+            <div class="retail-val">₹61 - 72</div>
+            <div class="qty">1kg</div>
+        </div>
+    </div>
+
+</body>
+</html>
