@@ -1,6 +1,6 @@
 **/.env
 **/.venv/
 # veggies-api/
+.vscode/
 veggies-api/__pycache__
-veggies-api/data/
 practice-snippets/
