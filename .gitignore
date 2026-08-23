@@ -1,1 +1,6 @@
-.env
+**/.env
+**/.venv/
+# veggies-api/
+veggies-api/__pycache__
+veggies-api/data/
+practice-snippets/
