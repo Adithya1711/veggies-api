@@ -1,0 +1,83 @@
+name: Self-Healing Data Pipeline
+
+on:
+  schedule:
+    - cron: "0 5 * * *" # Runs every day at 5:00 AM UTC
+  workflow_dispatch: # Adds a "Run workflow" button in GitHub
+
+permissions:
+  contents: write # Grants the bot permission to push the JSON files back to your repo
+
+jobs:
+  scrape-validate-heal:
+    runs-on: ubuntu-latest
+    env:
+      # Securely injects credentials from GitHub Settings -> Secrets
+      BRIGHT_DATA_API_TOKEN: ${{ secrets.BRIGHT_DATA_API_TOKEN }}
+      COLLECTOR_ID: ${{ secrets.COLLECTOR_ID }}
+
+    steps:
+      - name: 1 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 2 Setup Python & uv
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: 3 Setup Node.js (For Bright Data CLI)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 4 Run Initial Scrape
+        run: |
+          echo "Starting the Python extraction pipeline..."
+          uv run scraper/main.py
+
+      - name: 5 Validate Data Integrity
+        id: validate
+        run: |
+          # Dynamically locate today's generated JSON file
+          TODAY=$(date +'%d-%m-%Y')
+          FILE_PATH="veggies-api/data/$TODAY/chennai.json"
+
+          # Use jq (command-line JSON processor) to check if the array is empty
+          # If the website layout changed, the array will have 0 items.
+          if [ ! -f "$FILE_PATH" ] || [ $(jq 'length' "$FILE_PATH") -eq 0 ]; then
+            echo "🚨 Validation Failed: Data is empty! The website UI likely changed."
+            exit 1
+          fi
+
+          echo "✅ Validation Passed: Healthy data detected."
+        continue-on-error: true # Prevents the workflow from crashing so it can proceed to the heal step
+
+      - name: 6 AI Auto-Heal (Only runs if Step 5 fails)
+        if: steps.validate.outcome == 'failure'
+        run: |
+          echo "Triggering unattended AI self-healing..."
+
+          # --auto-approve allows the AI to patch the scraper code without a human clicking "yes"
+          npx -p @brightdata/cli bdata scraper heal $COLLECTOR_ID "The target website layout has changed. Update the selectors to correctly parse the data into the JSON array." --auto-approve
+
+          echo "Healing complete. Re-running the pipeline..."
+          uv run scraper/main.py
+
+      - name: 7 Commit and Push to API Server
+        run: |
+          echo "Configuring GitHub Actions Bot..."
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          echo "Staging the veggies-api/data folder..."
+          git add veggies-api/data/
+
+          # Check if there are actual file changes before trying to commit
+          if git diff --staged --quiet; then
+            echo "No new data changes detected. Skipping commit."
+          else
+            echo "Changes detected. Pushing to main branch..."
+            git commit -m "Auto-update market data: $(date +'%d-%m-%Y')"
+            git push
+          fi
