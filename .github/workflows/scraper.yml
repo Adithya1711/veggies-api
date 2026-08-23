@@ -54,7 +54,7 @@ jobs:
           fi
 
           # Validate vegetables array exists and isn't empty
-          VEGGIE_COUNT=$(jq '.[0].vegetables | length' "$FILE_PATH")
+          VEGGIE_COUNT=$(jq 'if type == "array" then .[0].vegetables else .vegetables end | length' "$FILE_PATH")
 
           if [ -z "$VEGGIE_COUNT" ] || [ "$VEGGIE_COUNT" -eq 0 ]; then
             echo "🚨 Validation Failed: 'vegetables' array is empty!"
