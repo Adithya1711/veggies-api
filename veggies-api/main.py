@@ -3,9 +3,11 @@ from datetime import datetime
 import json
 import os
 
-app = FastAPI(title="Regional Vegetable Market API")
+app = FastAPI(title="Veggies API",
+                description="Daily local wholesale and retail vegetable prices.",
+                version="1.0.0")
 
-@app.get("/api/v1/{place}/today")
+@app.get("/api/v1/{place}/today", tags=["Market Prices"])
 def get_today_prices(
     place: str = Path(..., title="The name of the region, e.g., chennai")
 ):
@@ -28,4 +30,4 @@ def get_today_prices(
     with open(file_path, "r", encoding="utf-8") as file:
         data = json.load(file)
         
-    return {"status": "success", "region": place, "date": today_str, "vegetables": data["vegetables"]}
+    return {"status": "success", "region": place, "info": "All amounts displayed for vegetables are in INR/kg", "date": today_str, "vegetables": data["vegetables"]}
