@@ -28,4 +28,4 @@ def get_today_prices(
     with open(file_path, "r", encoding="utf-8") as file:
         data = json.load(file)
         
-    return {"status": "success", "region": place, "date": today_str, "data": data}
+    return {"status": "success", "region": place, "date": today_str, "vegetables": data["vegetables"]}
