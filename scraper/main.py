@@ -7,7 +7,7 @@ from datetime import datetime
 
 # Load environment variables
 load_dotenv()
-api_token = os.getenv("BRIGHT_DATA_API_TOKEN")
+api_token = os.getenv("BRIGHTDATA_API_KEY")
 collector_id = os.getenv("COLLECTOR_ID")
 
 if not api_token or not collector_id:
@@ -15,7 +15,7 @@ if not api_token or not collector_id:
 
 # Define target place and URL
 target_place = "chennai"
-target_url = f"https://vegetablemarketprice.com/market/{target_place}/today"
+target_url = f"https://vegetablemarketprice.com/market/chennai/today"
 
 # Endpoints and Headers
 trigger_url = f"https://api.brightdata.com/dca/trigger?collector={collector_id}"
