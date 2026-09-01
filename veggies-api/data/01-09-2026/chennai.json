@@ -1,0 +1,331 @@
+{
+  "vegetables": [
+    {
+      "price": 49,
+      "minRetail": 54,
+      "maxRetail": 64,
+      "vegetable_name": "Onion Big (பெரிய வெங்காயம்)"
+    },
+    {
+      "price": 60,
+      "minRetail": 66,
+      "maxRetail": 78,
+      "vegetable_name": "Onion Small (சின்ன வெங்காயம்)"
+    },
+    {
+      "price": 24,
+      "minRetail": 26,
+      "maxRetail": 31,
+      "vegetable_name": "Tomato (தக்காளி)"
+    },
+    {
+      "price": 62,
+      "minRetail": 68,
+      "maxRetail": 81,
+      "vegetable_name": "Green Chilli (பச்சை மிளகாய்)"
+    },
+    {
+      "price": 42,
+      "minRetail": 46,
+      "maxRetail": 55,
+      "vegetable_name": "Beetroot (பீட்ரூட்)"
+    },
+    {
+      "price": 26,
+      "minRetail": 29,
+      "maxRetail": 34,
+      "vegetable_name": "Potato (உருளைக்கிழங்கு)"
+    },
+    {
+      "price": 10,
+      "minRetail": 11,
+      "maxRetail": 13,
+      "vegetable_name": "Raw Banana (Plantain) (வாழைக்காய்)"
+    },
+    {
+      "price": 10,
+      "minRetail": 11,
+      "maxRetail": 13,
+      "vegetable_name": "Amaranth Leaves (சிறு கீரை)"
+    },
+    {
+      "price": 70,
+      "minRetail": 77,
+      "maxRetail": 91,
+      "vegetable_name": "Amla (நெல்லிக்காய்)"
+    },
+    {
+      "price": 16,
+      "minRetail": 18,
+      "maxRetail": 21,
+      "vegetable_name": "Ash gourd (சாம்பல் பூசணிக்காய்)"
+    },
+    {
+      "price": 45,
+      "minRetail": 50,
+      "maxRetail": 59,
+      "vegetable_name": "Baby Corn (சிறிய மக்காச்சோளம்)"
+    },
+    {
+      "price": 16,
+      "minRetail": 18,
+      "maxRetail": 21,
+      "vegetable_name": "Banana Flower (வாழைப்பூ)"
+    },
+    {
+      "price": 44,
+      "minRetail": 48,
+      "maxRetail": 57,
+      "vegetable_name": "Capsicum (குடைமிளகாய்)"
+    },
+    {
+      "price": 43,
+      "minRetail": 47,
+      "maxRetail": 56,
+      "vegetable_name": "Bitter Gourd (பாகற்காய்)"
+    },
+    {
+      "price": 29,
+      "minRetail": 32,
+      "maxRetail": 38,
+      "vegetable_name": "Bottle Gourd (சுரைக்காய்)"
+    },
+    {
+      "price": 43,
+      "minRetail": 47,
+      "maxRetail": 56,
+      "vegetable_name": "Butter Beans (பட்டர் பீன்ஸ்)"
+    },
+    {
+      "price": 41,
+      "minRetail": 45,
+      "maxRetail": 53,
+      "vegetable_name": "Broad Beans (அவரைக்காய்)"
+    },
+    {
+      "price": 30,
+      "minRetail": 33,
+      "maxRetail": 39,
+      "vegetable_name": "Cabbage (முட்டைக்கோஸ்)"
+    },
+    {
+      "price": 52,
+      "minRetail": 57,
+      "maxRetail": 68,
+      "vegetable_name": "Carrot (கேரட்)"
+    },
+    {
+      "price": 37,
+      "minRetail": 41,
+      "maxRetail": 48,
+      "vegetable_name": "Cauliflower (காலிஃபிளவர்)"
+    },
+    {
+      "price": 40,
+      "minRetail": 44,
+      "maxRetail": 52,
+      "vegetable_name": "Cluster beans (கொத்தவரை)"
+    },
+    {
+      "price": 63,
+      "minRetail": 69,
+      "maxRetail": 82,
+      "vegetable_name": "Coconut (தேங்காய்)"
+    },
+    {
+      "price": 16,
+      "minRetail": 18,
+      "maxRetail": 21,
+      "vegetable_name": "Colocasia Leaves (சேப்பங்கிழங்கு கீரை)"
+    },
+    {
+      "price": 28,
+      "minRetail": 31,
+      "maxRetail": 36,
+      "vegetable_name": "Colocasia (சேப்பங்கிழங்கு)"
+    },
+    {
+      "price": 15,
+      "minRetail": 17,
+      "maxRetail": 20,
+      "vegetable_name": "Coriander Leaves (கொத்துமல்லி)"
+    },
+    {
+      "price": 27,
+      "minRetail": 30,
+      "maxRetail": 35,
+      "vegetable_name": "Corn (மக்காச்சோளம்)"
+    },
+    {
+      "price": 30,
+      "minRetail": 33,
+      "maxRetail": 39,
+      "vegetable_name": "Cucumber (வெள்ளரிக்காய்)"
+    },
+    {
+      "price": 34,
+      "minRetail": 37,
+      "maxRetail": 44,
+      "vegetable_name": "Curry Leaves (கறிவேப்பிலை)"
+    },
+    {
+      "price": 11,
+      "minRetail": 12,
+      "maxRetail": 14,
+      "vegetable_name": "Dill Leaves (வெந்தயம் இலைகள்)"
+    },
+    {
+      "price": 50,
+      "minRetail": 55,
+      "maxRetail": 65,
+      "vegetable_name": "Drumsticks (முருங்கைக்காய்)"
+    },
+    {
+      "price": 38,
+      "minRetail": 42,
+      "maxRetail": 49,
+      "vegetable_name": "Brinjal (கத்திரிக்காய்)"
+    },
+    {
+      "price": 75,
+      "minRetail": 83,
+      "maxRetail": 98,
+      "vegetable_name": "Brinjal (Big) (கத்திரிக்காய்)"
+    },
+    {
+      "price": 40,
+      "minRetail": 44,
+      "maxRetail": 52,
+      "vegetable_name": "Elephant Yam (சேனைக்கிழங்கு)"
+    },
+    {
+      "price": 11,
+      "minRetail": 12,
+      "maxRetail": 14,
+      "vegetable_name": "Fenugreek Leaves (வெந்தயக்கீரை)"
+    },
+    {
+      "price": 79,
+      "minRetail": 87,
+      "maxRetail": 103,
+      "vegetable_name": "French Beans (பீன்ஸ்)"
+    },
+    {
+      "price": 189,
+      "minRetail": 208,
+      "maxRetail": 246,
+      "vegetable_name": "Garlic (பூண்டு)"
+    },
+    {
+      "price": 98,
+      "minRetail": 108,
+      "maxRetail": 127,
+      "vegetable_name": "Ginger (இஞ்சி)"
+    },
+    {
+      "price": 37,
+      "minRetail": 41,
+      "maxRetail": 48,
+      "vegetable_name": "Onion Green (பச்சை வெங்காயம்)"
+    },
+    {
+      "price": 50,
+      "minRetail": 55,
+      "maxRetail": 65,
+      "vegetable_name": "Green Peas (பச்சை பட்டாணி)"
+    },
+    {
+      "price": 35,
+      "minRetail": 39,
+      "maxRetail": 46,
+      "vegetable_name": "Ivy Gourd (கோவைக்காய்)"
+    },
+    {
+      "price": 50,
+      "minRetail": 55,
+      "maxRetail": 65,
+      "vegetable_name": "Lemon (Lime) (எலுமிச்சை)"
+    },
+    {
+      "price": 48,
+      "minRetail": 53,
+      "maxRetail": 62,
+      "vegetable_name": "Mango Raw (மாங்காய்)"
+    },
+    {
+      "price": 6,
+      "minRetail": 7,
+      "maxRetail": 8,
+      "vegetable_name": "Mint Leaves (புதினா)"
+    },
+    {
+      "price": 75,
+      "minRetail": 83,
+      "maxRetail": 98,
+      "vegetable_name": "Mushroom (காளான்)"
+    },
+    {
+      "price": 17,
+      "minRetail": 19,
+      "maxRetail": 22,
+      "vegetable_name": "Mustard Leaves (கடுகு இலைகள்)"
+    },
+    {
+      "price": 36,
+      "minRetail": 40,
+      "maxRetail": 47,
+      "vegetable_name": "Ladies Finger (வெண்டைக்காய்)"
+    },
+    {
+      "price": 21,
+      "minRetail": 23,
+      "maxRetail": 27,
+      "vegetable_name": "Pumpkin (பூசணி)"
+    },
+    {
+      "price": 34,
+      "minRetail": 37,
+      "maxRetail": 44,
+      "vegetable_name": "Radish (முள்ளங்கி)"
+    },
+    {
+      "price": 39,
+      "minRetail": 43,
+      "maxRetail": 51,
+      "vegetable_name": "Ridge Gourd (பீர்க்கங்காய்)"
+    },
+    {
+      "price": 37,
+      "minRetail": 41,
+      "maxRetail": 48,
+      "vegetable_name": "Shallot (Pearl Onion) (சிறிய வெங்காயம்)"
+    },
+    {
+      "price": 38,
+      "minRetail": 42,
+      "maxRetail": 49,
+      "vegetable_name": "Snake Gourd (புடலங்காய்)"
+    },
+    {
+      "price": 11,
+      "minRetail": 12,
+      "maxRetail": 14,
+      "vegetable_name": "Sorrel Leaves (புளிச்ச கீரை)"
+    },
+    {
+      "price": 14,
+      "minRetail": 15,
+      "maxRetail": 18,
+      "vegetable_name": "Spinach (கீரை)"
+    },
+    {
+      "price": 33,
+      "minRetail": 36,
+      "maxRetail": 43,
+      "vegetable_name": "Sweet Potato (இனிப்பு உருளைக்கிழங்கு)"
+    }
+  ],
+  "input": {
+    "url": "https://vegetablemarketprice.com/market/chennai/today"
+  }
+}
