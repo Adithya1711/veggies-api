@@ -1,8 +1,8 @@
 name: Self-Healing Data Pipeline
 
 on:
-  schedule:
-    - cron: "0 5 * * *" # Runs every day at 5:00 AM UTC
+  # schedule:
+    # - cron: "0 5 * * *" # Runs every day at 5:00 AM UTC
   workflow_dispatch: # Adds a "Run workflow" button in GitHub
 
 permissions:
